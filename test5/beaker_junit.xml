@@ -1,140 +1,143 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="junit.xsl"?>
+<?xml version='1.0' encoding='UTF-8'?> 
+<?xml-stylesheet type='text/xsl' href='junit.xsl'?> 
 <testsuites>
-  <meta_test_info page_active="no-links" link_url=""/>
-  <testsuite name="pre_suite" tests="7" errors="0" failures="0" skipped="2" pending="0" total="7" time="78.794441">
+  <meta_test_info page_active='no-links' link_url=''/>
+  <testsuite name='pre_suite' tests='7' errors='0' failures='0' skipped='2' pending='0' total='7' time='88.215097'>
     <properties>
-      <property name="project" value="Beaker"/>
-      <property name="department" value="unknown"/>
-      <property name="created_by" value="rishi.javia"/>
-      <property name="host_tags" value="{}"/>
-      <property name="openstack_api_key" value=""/>
-      <property name="openstack_username" value=""/>
-      <property name="openstack_auth_url" value="/tokens"/>
-      <property name="openstack_tenant" value=""/>
-      <property name="openstack_keyname" value=""/>
-      <property name="openstack_network" value=""/>
-      <property name="openstack_region" value=""/>
-      <property name="openstack_volume_support" value="true"/>
-      <property name="jenkins_build_url" value=""/>
-      <property name="validate" value="true"/>
-      <property name="configure" value="true"/>
-      <property name="log_level" value="debug"/>
-      <property name="trace_limit" value="10"/>
-      <property name="master-start-curl-retries" value="30"/>
-      <property name="masterless" value="false"/>
-      <property name="options_file" value="merged_options.rb"/>
-      <property name="type" value="aio"/>
-      <property name="provision" value="true"/>
-      <property name="preserve_hosts" value="onfail"/>
-      <property name="root_keys" value="false"/>
-      <property name="quiet" value="false"/>
-      <property name="project_root" value="/Users/rishi.javia/Documents/beaker/lib/beaker"/>
-      <property name="xml_dir" value="junit"/>
-      <property name="xml_file" value="beaker_junit.xml"/>
-      <property name="xml_time" value="beaker_times.xml"/>
-      <property name="xml_time_enabled" value="false"/>
-      <property name="xml_stylesheet" value="junit.xsl"/>
-      <property name="default_log_prefix" value="beaker_logs"/>
-      <property name="log_dir" value="log"/>
-      <property name="log_sut_event" value="sut.log"/>
-      <property name="color" value="true"/>
-      <property name="dry_run" value="false"/>
-      <property name="test_tag_and" value="[]"/>
-      <property name="test_tag_or" value="[]"/>
-      <property name="test_tag_exclude" value="[]"/>
-      <property name="timeout" value="900"/>
-      <property name="fail_mode" value="slow"/>
-      <property name="accept_all_exit_codes" value="false"/>
-      <property name="timesync" value="false"/>
-      <property name="disable_iptables" value="false"/>
-      <property name="set_env" value="true"/>
-      <property name="disable_updates" value="true"/>
-      <property name="repo_proxy" value="true"/>
-      <property name="package_proxy" value="false"/>
-      <property name="add_el_extras" value="false"/>
-      <property name="epel_url" value="http://dl.fedoraproject.org/pub/epel"/>
-      <property name="epel_url_archive" value="http://archive.fedoraproject.org/pub/archive/epel"/>
-      <property name="consoleport" value="443"/>
-      <property name="pe_dir" value="/opt/enterprise/dists"/>
-      <property name="pe_version_file" value="LATEST"/>
-      <property name="pe_version_file_win" value="LATEST-win"/>
-      <property name="host_env" value="{}"/>
-      <property name="host_name_prefix" value=""/>
-      <property name="ssh_env_file" value="~/.ssh/environment"/>
-      <property name="profile_d_env_file" value="/etc/profile.d/beaker_env.sh"/>
-      <property name="dot_fog" value="/Users/rishi.javia/.fog"/>
-      <property name="ec2_yaml" value="config/image_templates/ec2.yaml"/>
-      <property name="help" value="false"/>
-      <property name="collect_perf_data" value="none"/>
-      <property name="puppetdb_port_ssl" value="8081"/>
-      <property name="puppetdb_port_nonssl" value="8080"/>
-      <property name="puppetserver_port" value="8140"/>
-      <property name="nodeclassifier_port" value="4433"/>
-      <property name="cache_files_locally" value="false"/>
-      <property name="aws_keyname_modifier" value="3483773355"/>
-      <property name="run_in_parallel" value="[]"/>
-      <property name="ssh" value="{:config=&gt;false, :paranoid=&gt;false, :auth_methods=&gt;[&quot;publickey&quot;], :port=&gt;22, :forward_agent=&gt;true, :keys=&gt;[&quot;id_rsa_acceptance&quot;, &quot;/Users/rishi.javia/.ssh/id_rsa-acceptance&quot;], :user_known_hosts_file=&gt;&quot;/Users/rishi.javia/.ssh/known_hosts&quot;, :keepalive=&gt;true}"/>
-      <property name="tests" value="[&quot;tests/windows/QA-506_windows_exit_codes_test.rb&quot;, &quot;tests/windows/QA-563_windows_exit_mcollective.rb&quot;, &quot;tests/windows/QA-760_win_dash_dot_file_test.rb&quot;, &quot;tests/windows/env_windows_installdir_fact.rb&quot;, &quot;tests/windows/eventlog.rb&quot;]"/>
-      <property name="pre_suite" value="[&quot;setup/common/pre-suite/000-delete-puppet-when-none.rb&quot;, &quot;setup/aio/pre-suite/010_Install.rb&quot;, &quot;setup/aio/pre-suite/020_InstallCumulusModules.rb&quot;, &quot;setup/aio/pre-suite/021_InstallAristaModule.rb&quot;, &quot;setup/common/pre-suite/025_StopFirewall.rb&quot;, &quot;setup/common/pre-suite/040_ValidateSignCert.rb&quot;, &quot;setup/aio/pre-suite/045_EnsureMasterStarted.rb&quot;]"/>
-      <property name="is_puppetserver" value="true"/>
-      <property name="use-service" value="true"/>
-      <property name="puppetservice" value="puppetserver"/>
-      <property name="puppetserver-confdir" value="/etc/puppetlabs/puppetserver/conf.d"/>
-      <property name="puppetserver-config" value="/etc/puppetlabs/puppetserver/conf.d/puppetserver.conf"/>
-      <property name="load_path" value="[&quot;./lib&quot;]"/>
-      <property name="xml" value="true"/>
-      <property name="forge_host" value="forge-aio01-petest.puppetlabs.com"/>
-      <property name="hosts_file" value="/Users/rishi.javia/Documents/puppet/acceptance/centos7-pe.yml"/>
-      <property name="command_line" value="/Users/rishi.javia/Documents/puppet/acceptance/vendor/bundle/ruby/2.2.0/bin/beaker --options-file merged_options.rb --hosts centos7-pe.yml --tests=tests/windows"/>
-      <property name="HOSTS" value="{:&quot;centos7-64-1&quot;=&gt;{:pe_dir=&gt;nil, :pe_ver=&gt;nil, :pe_upgrade_dir=&gt;nil, :pe_upgrade_ver=&gt;nil, :hypervisor=&gt;&quot;vmpooler&quot;, :platform=&gt;&quot;el-7-x86_64&quot;, :template=&gt;&quot;centos-7-x86_64&quot;, :roles=&gt;[&quot;master&quot;, &quot;agent&quot;, &quot;dashboard&quot;, &quot;database&quot;, &quot;default&quot;], :host_tags=&gt;{}}}"/>
-      <property name="nfs_server" value="none"/>
-      <property name="pooling_api" value="http://vmpooler.delivery.puppetlabs.net/"/>
-      <property name="home" value="/Users/rishi.javia"/>
-      <property name="helper" value="[]"/>
-      <property name="post_suite" value="[]"/>
-      <property name="install" value="[]"/>
-      <property name="pre_cleanup" value="[]"/>
-      <property name="modules" value="[]"/>
-      <property name="logger" value="#&lt;Beaker::Logger:0x007fa9e04a73d8&gt;"/>
-      <property name="timestamp" value="2017-08-08 19:44:30 -0700"/>
-      <property name="beaker_version" value="3.21.1"/>
-      <property name="log_prefix" value="centos7-pe"/>
-      <property name="xml_dated_dir" value="junit/centos7-pe/2017-08-08_19_44_30"/>
-      <property name="log_dated_dir" value="log/centos7-pe/2017-08-08_19_44_30"/>
-      <property name="logger_sut" value="#&lt;Beaker::Logger:0x007fa9e04a63c0&gt;"/>
+      <property name='project' value='Beaker'/>
+      <property name='department' value='unknown'/>
+      <property name='created_by' value='rishi.javia'/>
+      <property name='host_tags' value='{}'/>
+      <property name='openstack_api_key' value=''/>
+      <property name='openstack_username' value=''/>
+      <property name='openstack_auth_url' value='/tokens'/>
+      <property name='openstack_tenant' value=''/>
+      <property name='openstack_keyname' value=''/>
+      <property name='openstack_network' value=''/>
+      <property name='openstack_region' value=''/>
+      <property name='openstack_volume_support' value='true'/>
+      <property name='jenkins_build_url' value=''/>
+      <property name='validate' value='true'/>
+      <property name='configure' value='true'/>
+      <property name='log_level' value='debug'/>
+      <property name='trace_limit' value='10'/>
+      <property name='master-start-curl-retries' value='30'/>
+      <property name='masterless' value='false'/>
+      <property name='options_file' value='merged_options.rb'/>
+      <property name='type' value='aio'/>
+      <property name='provision' value='true'/>
+      <property name='preserve_hosts' value='onfail'/>
+      <property name='root_keys' value='false'/>
+      <property name='quiet' value='false'/>
+      <property name='project_root' value='/Users/rishi.javia/Documents/beaker/lib/beaker'/>
+      <property name='xml_dir' value='junit'/>
+      <property name='xml_file' value='beaker_junit.xml'/>
+      <property name='xml_time' value='beaker_times.xml'/>
+      <property name='xml_time_enabled' value='false'/>
+      <property name='xml_stylesheet' value='junit.xsl'/>
+      <property name='default_log_prefix' value='beaker_logs'/>
+      <property name='log_dir' value='log'/>
+      <property name='log_sut_event' value='sut.log'/>
+      <property name='color' value='true'/>
+      <property name='dry_run' value='false'/>
+      <property name='test_tag_and' value='[]'/>
+      <property name='test_tag_or' value='[]'/>
+      <property name='test_tag_exclude' value='[]'/>
+      <property name='timeout' value='900'/>
+      <property name='fail_mode' value='slow'/>
+      <property name='accept_all_exit_codes' value='false'/>
+      <property name='timesync' value='false'/>
+      <property name='disable_iptables' value='false'/>
+      <property name='set_env' value='true'/>
+      <property name='disable_updates' value='true'/>
+      <property name='repo_proxy' value='true'/>
+      <property name='package_proxy' value='false'/>
+      <property name='add_el_extras' value='false'/>
+      <property name='epel_url' value='http://dl.fedoraproject.org/pub/epel'/>
+      <property name='epel_url_archive' value='http://archive.fedoraproject.org/pub/archive/epel'/>
+      <property name='consoleport' value='443'/>
+      <property name='pe_dir' value='/opt/enterprise/dists'/>
+      <property name='pe_version_file' value='LATEST'/>
+      <property name='pe_version_file_win' value='LATEST-win'/>
+      <property name='host_env' value='{}'/>
+      <property name='host_name_prefix' value=''/>
+      <property name='ssh_env_file' value='~/.ssh/environment'/>
+      <property name='profile_d_env_file' value='/etc/profile.d/beaker_env.sh'/>
+      <property name='dot_fog' value='/Users/rishi.javia/.fog'/>
+      <property name='ec2_yaml' value='config/image_templates/ec2.yaml'/>
+      <property name='help' value='false'/>
+      <property name='collect_perf_data' value='none'/>
+      <property name='puppetdb_port_ssl' value='8081'/>
+      <property name='puppetdb_port_nonssl' value='8080'/>
+      <property name='puppetserver_port' value='8140'/>
+      <property name='nodeclassifier_port' value='4433'/>
+      <property name='cache_files_locally' value='false'/>
+      <property name='aws_keyname_modifier' value='6697587076'/>
+      <property name='run_in_parallel' value='[]'/>
+      <property name='ssh' value='{:config=&gt;false, :paranoid=&gt;false, :auth_methods=&gt;[&quot;publickey&quot;], :port=&gt;22, :forward_agent=&gt;true, :keys=&gt;[&quot;id_rsa_acceptance&quot;, &quot;/Users/rishi.javia/.ssh/id_rsa-acceptance&quot;], :user_known_hosts_file=&gt;&quot;/Users/rishi.javia/.ssh/known_hosts&quot;, :keepalive=&gt;true}'/>
+      <property name='tests' value='[&quot;tests/windows/QA-506_windows_exit_codes_test.rb&quot;, &quot;tests/windows/QA-563_windows_exit_mcollective.rb&quot;, &quot;tests/windows/QA-760_win_dash_dot_file_test.rb&quot;, &quot;tests/windows/env_windows_installdir_fact.rb&quot;, &quot;tests/windows/eventlog.rb&quot;]'/>
+      <property name='pre_suite' value='[&quot;setup/common/pre-suite/000-delete-puppet-when-none.rb&quot;, &quot;setup/aio/pre-suite/010_Install.rb&quot;, &quot;setup/aio/pre-suite/020_InstallCumulusModules.rb&quot;, &quot;setup/aio/pre-suite/021_InstallAristaModule.rb&quot;, &quot;setup/common/pre-suite/025_StopFirewall.rb&quot;, &quot;setup/common/pre-suite/040_ValidateSignCert.rb&quot;, &quot;setup/aio/pre-suite/045_EnsureMasterStarted.rb&quot;]'/>
+      <property name='is_puppetserver' value='true'/>
+      <property name='use-service' value='true'/>
+      <property name='puppetservice' value='puppetserver'/>
+      <property name='puppetserver-confdir' value='/etc/puppetlabs/puppetserver/conf.d'/>
+      <property name='puppetserver-config' value='/etc/puppetlabs/puppetserver/conf.d/puppetserver.conf'/>
+      <property name='load_path' value='[&quot;./lib&quot;]'/>
+      <property name='xml' value='true'/>
+      <property name='forge_host' value='forge-aio01-petest.puppetlabs.com'/>
+      <property name='hosts_file' value='/Users/rishi.javia/Documents/puppet/acceptance/centos7-pe.yml'/>
+      <property name='command_line' value='/Users/rishi.javia/Documents/puppet/acceptance/vendor/bundle/ruby/2.2.0/bin/beaker --options-file merged_options.rb --hosts centos7-pe.yml --tests=tests/windows'/>
+      <property name='HOSTS' value='{:&quot;centos7-64-1&quot;=&gt;{:pe_dir=&gt;nil, :pe_ver=&gt;nil, :pe_upgrade_dir=&gt;nil, :pe_upgrade_ver=&gt;nil, :hypervisor=&gt;&quot;vmpooler&quot;, :platform=&gt;&quot;el-7-x86_64&quot;, :template=&gt;&quot;centos-7-x86_64&quot;, :roles=&gt;[&quot;master&quot;, &quot;agent&quot;, &quot;dashboard&quot;, &quot;database&quot;, &quot;default&quot;], :host_tags=&gt;{}}}'/>
+      <property name='nfs_server' value='none'/>
+      <property name='pooling_api' value='http://vmpooler.delivery.puppetlabs.net/'/>
+      <property name='home' value='/Users/rishi.javia'/>
+      <property name='helper' value='[]'/>
+      <property name='post_suite' value='[]'/>
+      <property name='install' value='[]'/>
+      <property name='pre_cleanup' value='[]'/>
+      <property name='modules' value='[]'/>
+      <property name='logger' value='#&lt;Beaker::Logger:0x007fc73c267108&gt;'/>
+      <property name='timestamp' value='2017-08-08 19:40:42 -0700'/>
+      <property name='beaker_version' value='3.21.1'/>
+      <property name='log_prefix' value='centos7-pe'/>
+      <property name='xml_dated_dir' value='junit/centos7-pe/2017-08-08_19_40_42'/>
+      <property name='log_dated_dir' value='log/centos7-pe/2017-08-08_19_40_42'/>
+      <property name='logger_sut' value='#&lt;Beaker::Logger:0x007fc73c266118&gt;'/>
     </properties>
-    <testcase classname="setup/common/pre-suite" name="000-delete-puppet-when-none.rb" time="0.000394">
-      <system-out><![CDATA[
+    <testcase classname='setup/common/pre-suite' name='000-delete-puppet-when-none.rb' time='0.000366'>
+      <system-out>
+        <![CDATA[
 Expunge puppet bits if hypervisor is none
 Begin teardown
 End teardown
-]]></system-out>
+]]>
+      </system-out>
     </testcase>
-    <testcase classname="setup/aio/pre-suite" name="010_Install.rb" time="29.083510">
-      <system-out><![CDATA[
+    <testcase classname='setup/aio/pre-suite' name='010_Install.rb' time='30.300528'>
+      <system-out>
+        <![CDATA[
 Install Packages
 
 * Install puppet-agent...
 
 * Install puppetserver...
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) 19:44:36$ curl -o /etc/yum.repos.d/pl-puppetserver-latest-el-7-x86_64.repo http://nightlies.puppetlabs.com/puppetserver-latest//repo_configs/rpm/pl-puppetserver-latest-el-7-x86_64.repo
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) 19:40:48$ curl -o /etc/yum.repos.d/pl-puppetserver-latest-el-7-x86_64.repo http://nightlies.puppetlabs.com/puppetserver-latest//repo_configs/rpm/pl-puppetserver-latest-el-7-x86_64.repo
       % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                      Dload  Upload   Total   Spent    Left  Speed
-      0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0    100   224  100   224    0     0   1963      0 --:--:-- --:--:-- --:--:--  1964
+      0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0    100   224  100   224    0     0   1963      0 --:--:-- --:--:-- --:--:--  1982
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) executed in 0.15 seconds
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) executed in 0.15 seconds
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) 19:44:37$ curl -o /etc/yum.repos.d/pl-puppet-agent-d33a1fddd412fce059fdc68127a0b9b31c0bfe98-el-7-x86_64.repo http://builds.puppetlabs.lan/puppet-agent/d33a1fddd412fce059fdc68127a0b9b31c0bfe98/repo_configs/rpm/pl-puppet-agent-d33a1fddd412fce059fdc68127a0b9b31c0bfe98-el-7-x86_64.repo
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) 19:40:48$ curl -o /etc/yum.repos.d/pl-puppet-agent-d33a1fddd412fce059fdc68127a0b9b31c0bfe98-el-7-x86_64.repo http://builds.puppetlabs.lan/puppet-agent/d33a1fddd412fce059fdc68127a0b9b31c0bfe98/repo_configs/rpm/pl-puppet-agent-d33a1fddd412fce059fdc68127a0b9b31c0bfe98-el-7-x86_64.repo
       % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                      Dload  Upload   Total   Spent    Left  Speed
-      0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0    100   284  100   284    0     0  38649      0 --:--:-- --:--:-- --:--:-- 40571
+      0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0    100   284  100   284    0     0  40318      0 --:--:-- --:--:-- --:--:-- 47333
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) executed in 0.04 seconds
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) executed in 0.04 seconds
   Installing puppetserver
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) 19:44:37$ yum -y  install puppetserver
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) 19:40:48$ yum -y  install puppetserver
     Loaded plugins: fastestmirror
     Loading mirror speeds from cached hostfile
     Resolving Dependencies
@@ -238,7 +241,7 @@ Install Packages
     Public key for puppetserver-5.0.1-0.1SNAPSHOT.2017.08.06T0835.el7.noarch.rpm is not installed
     warning: /var/cache/yum/x86_64/7/pl-puppetserver-latest/packages/puppetserver-5.0.1-0.1SNAPSHOT.2017.08.06T0835.el7.noarch.rpm: Header V4 RSA/SHA1 Signature, key ID 07bb6c57: NOKEY
     --------------------------------------------------------------------------------
-    Total                                               28 MB/s | 124 MB  00:04     
+    Total                                               27 MB/s | 124 MB  00:04     
     Retrieving key from http://nightlies.puppetlabs.com/07BB6C57
     Importing GPG key 0x07BB6C57:
      Userid     : "Puppet Labs Nightly Build Key (Puppet Labs Nightly Build Key) <delivery@puppetlabs.com>"
@@ -330,124 +333,132 @@ Install Packages
       nss-util.x86_64 0:3.28.4-1.0.el7_3                                            
     Complete!
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) executed in 27.23 seconds
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) executed in 28.25 seconds
 
-kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) 19:45:04$ puppet --version
+hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) 19:41:17$ puppet --version
   5.0.1
 
-kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) executed in 0.74 seconds
+hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) executed in 0.93 seconds
 
-kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) 19:45:05$ env PATH="/opt/puppetlabs/puppet/bin:${PATH}" ruby --version
+hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) 19:41:18$ env PATH="/opt/puppetlabs/puppet/bin:${PATH}" ruby --version
   ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-linux]
 
-kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) executed in 0.04 seconds
+hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) executed in 0.04 seconds
 
-kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) 19:45:05$ env PATH="/opt/puppetlabs/puppet/bin:${PATH}" ruby -e 'puts Time.now.strftime("%Y-%m-%d %T.%L %z")'
-  2017-08-09 02:40:28.690 +0000
+hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) 19:41:18$ env PATH="/opt/puppetlabs/puppet/bin:${PATH}" ruby -e 'puts Time.now.strftime("%Y-%m-%d %T.%L %z")'
+  2017-08-09 02:36:41.664 +0000
 
-kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) executed in 0.07 seconds
+hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) executed in 0.07 seconds
 Host times vary 0 ms
 
-kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) 19:45:05$ env PATH="/opt/puppetlabs/puppet/bin:${PATH}" gem source --clear-all
+hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) 19:41:18$ env PATH="/opt/puppetlabs/puppet/bin:${PATH}" gem source --clear-all
   *** Removed specs cache ***
 
-kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) executed in 0.20 seconds
+hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) executed in 0.21 seconds
 
-kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) 19:45:05$ env PATH="/opt/puppetlabs/puppet/bin:${PATH}" gem source --add http://rubygems.delivery.puppetlabs.net
+hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) 19:41:18$ env PATH="/opt/puppetlabs/puppet/bin:${PATH}" gem source --add http://rubygems.delivery.puppetlabs.net
   http://rubygems.delivery.puppetlabs.net added to sources
 
-kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) executed in 0.61 seconds
+hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) executed in 0.60 seconds
 Begin teardown
 End teardown
-]]></system-out>
+]]>
+      </system-out>
     </testcase>
-    <testcase classname="setup/aio/pre-suite" name="020_InstallCumulusModules.rb" time="0.000400">
-      <skipped type="skip"/>
-      <system-out><![CDATA[
+    <testcase classname='setup/aio/pre-suite' name='020_InstallCumulusModules.rb' time='0.000569'>
+      <skipped type='skip'/>
+      <system-out>
+        <![CDATA[
 No cumulus hosts present
 Begin teardown
 End teardown
-]]></system-out>
+]]>
+      </system-out>
     </testcase>
-    <testcase classname="setup/aio/pre-suite" name="021_InstallAristaModule.rb" time="0.000330">
-      <skipped type="skip"/>
-      <system-out><![CDATA[
+    <testcase classname='setup/aio/pre-suite' name='021_InstallAristaModule.rb' time='0.000471'>
+      <skipped type='skip'/>
+      <system-out>
+        <![CDATA[
 No arista hosts present
 Begin teardown
 End teardown
-]]></system-out>
+]]>
+      </system-out>
     </testcase>
-    <testcase classname="setup/common/pre-suite" name="025_StopFirewall.rb" time="1.330889">
-      <system-out><![CDATA[
+    <testcase classname='setup/common/pre-suite' name='025_StopFirewall.rb' time='1.534304'>
+      <system-out>
+        <![CDATA[
 Stop firewall
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) 19:45:05$ puppet resource service firewalld ensure=stopped
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) 19:41:18$ puppet resource service firewalld ensure=stopped
     service { 'firewalld':
       ensure => 'stopped',
     }
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) executed in 1.33 seconds
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) executed in 1.53 seconds
 Begin teardown
 End teardown
-]]></system-out>
+]]>
+      </system-out>
     </testcase>
-    <testcase classname="setup/common/pre-suite" name="040_ValidateSignCert.rb" time="15.713742">
-      <system-out><![CDATA[
+    <testcase classname='setup/common/pre-suite' name='040_ValidateSignCert.rb' time='20.309545'>
+      <system-out>
+        <![CDATA[
 Validate Sign Cert
 
-kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) 19:45:07$ facter hostname
-  kmgni2dngg4so4r
+hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) 19:41:20$ facter hostname
+  hd5ny3fnwaky20i
 
-kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) executed in 0.09 seconds
+hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) executed in 0.10 seconds
 
-kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) 19:45:07$ facter fqdn
-  kmgni2dngg4so4r.delivery.puppetlabs.net
+hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) 19:41:20$ facter fqdn
+  hd5ny3fnwaky20i.delivery.puppetlabs.net
 
-kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) executed in 0.09 seconds
+hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) executed in 0.10 seconds
 
 * Ensure puppet is stopped
 
-kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) 19:45:07$ puppet resource service puppetserver ensure=stopped
+hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) 19:41:20$ puppet resource service puppetserver ensure=stopped
   service { 'puppetserver':
     ensure => 'stopped',
   }
 
-kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) executed in 0.95 seconds
+hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) executed in 1.03 seconds
 
 * Clear SSL on all hosts
 
-kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) 19:45:08$ puppet agent --configprint ssldir
+hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) 19:41:21$ puppet agent --configprint ssldir
   /etc/puppetlabs/puppet/ssl
 
-kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) executed in 0.73 seconds
+hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) executed in 0.82 seconds
 
-kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) 19:45:09$ rm -rf '/etc/puppetlabs/puppet/ssl'
+hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) 19:41:22$ rm -rf '/etc/puppetlabs/puppet/ssl'
 
-kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) executed in 0.03 seconds
+hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) executed in 0.03 seconds
 
 * Master: Start Puppet Master
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) 19:45:09$ mktemp -dt 040_ValidateSignCert.rb.XXXXXX
-    /tmp/040_ValidateSignCert.rb.FzvkLl
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) 19:41:22$ mktemp -dt 040_ValidateSignCert.rb.XXXXXX
+    /tmp/040_ValidateSignCert.rb.ND1inz
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) executed in 0.03 seconds
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) executed in 0.03 seconds
   Setting curl retries to 30
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) 19:45:09$ puppet master --configprint confdir
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) 19:41:22$ puppet master --configprint confdir
     /etc/puppetlabs/puppet
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) executed in 0.74 seconds
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) executed in 0.83 seconds
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) 19:45:09$ puppet master --configprint vardir
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) 19:41:23$ puppet master --configprint vardir
     /opt/puppetlabs/server/data/puppetserver
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) executed in 0.87 seconds
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) executed in 0.79 seconds
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) 19:45:10$ test -e /etc/puppetlabs/puppetserver/conf.d/puppetserver.conf
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) 19:41:24$ test -e /etc/puppetlabs/puppetserver/conf.d/puppetserver.conf
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) executed in 0.03 seconds
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) executed in 0.03 seconds
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) 19:45:10$ cat /etc/puppetlabs/puppetserver/conf.d/puppetserver.conf
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) 19:41:24$ cat /etc/puppetlabs/puppetserver/conf.d/puppetserver.conf
     # configuration for the JRuby interpreters
     jruby-puppet: {
         # Where the puppet-agent dependency places puppet, facter, etc...
@@ -525,33 +536,33 @@ kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) executed in 0.03 seconds
         #enabled: true
     }
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) executed in 0.04 seconds
-  localhost $ scp /var/folders/8z/d3hkzy8j1wxfbmzwzmpf890w0000gq/T/beaker20170808-7518-oi1698 centos7-64-1:/etc/puppetlabs/puppetserver/conf.d/puppetserver.conf {:ignore => }
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) executed in 0.03 seconds
+  localhost $ scp /var/folders/8z/d3hkzy8j1wxfbmzwzmpf890w0000gq/T/beaker20170808-7166-eoaumx centos7-64-1:/etc/puppetlabs/puppetserver/conf.d/puppetserver.conf {:ignore => }
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) 19:45:11$ puppet master --configprint confdir
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) 19:41:24$ puppet master --configprint confdir
     /etc/puppetlabs/puppet
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) executed in 0.78 seconds
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) executed in 0.98 seconds
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) 19:45:11$ test -e /etc/puppetlabs/puppet/puppet.conf
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) 19:41:25$ test -e /etc/puppetlabs/puppet/puppet.conf
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) executed in 0.03 seconds
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) executed in 0.03 seconds
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) 19:45:11$ cp /etc/puppetlabs/puppet/puppet.conf /tmp/040_ValidateSignCert.rb.FzvkLl/puppet.conf.bak
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) 19:41:25$ cp /etc/puppetlabs/puppet/puppet.conf /tmp/040_ValidateSignCert.rb.ND1inz/puppet.conf.bak
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) executed in 0.03 seconds
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) executed in 0.03 seconds
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) 19:45:11$ puppet master --configprint config
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) 19:41:25$ puppet master --configprint config
     /etc/puppetlabs/puppet/puppet.conf
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) executed in 0.69 seconds
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) executed in 0.86 seconds
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) 19:45:12$ puppet master --configprint config
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) 19:41:26$ puppet master --configprint config
     /etc/puppetlabs/puppet/puppet.conf
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) executed in 0.68 seconds
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) executed in 1.23 seconds
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) 19:45:13$ cat /etc/puppetlabs/puppet/puppet.conf
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) 19:41:27$ cat /etc/puppetlabs/puppet/puppet.conf
     # This file can be used to override the default puppet settings.
     # See the following links for more details on what settings are available:
     # - https://docs.puppetlabs.com/puppet/latest/reference/config_important_settings.html
@@ -565,10 +576,10 @@ kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) executed in 0.03 seconds
     pidfile = /var/run/puppetlabs/puppetserver/puppetserver.pid
     codedir = /etc/puppetlabs/code
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) executed in 0.03 seconds
-  localhost $ scp /var/folders/8z/d3hkzy8j1wxfbmzwzmpf890w0000gq/T/beaker20170808-7518-1jxgg5x centos7-64-1:/tmp/040_ValidateSignCert.rb.FzvkLl/puppet.conf {:ignore => }
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) executed in 0.18 seconds
+  localhost $ scp /var/folders/8z/d3hkzy8j1wxfbmzwzmpf890w0000gq/T/beaker20170808-7166-xxri0w centos7-64-1:/tmp/040_ValidateSignCert.rb.ND1inz/puppet.conf {:ignore => }
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) 19:45:13$ cat /etc/puppetlabs/puppet/puppet.conf
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) 19:41:27$ cat /etc/puppetlabs/puppet/puppet.conf
     [master]
     vardir = /opt/puppetlabs/server/data/puppetserver
     logdir = /var/log/puppetlabs/puppetserver
@@ -577,109 +588,247 @@ kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) executed in 0.03 seconds
     codedir = /etc/puppetlabs/code
     
     [main]
-    dns_alt_names = puppet,kmgni2dngg4so4r,kmgni2dngg4so4r.delivery.puppetlabs.net
+    dns_alt_names = puppet,hd5ny3fnwaky20i,hd5ny3fnwaky20i.delivery.puppetlabs.net
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) executed in 0.03 seconds
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) executed in 0.03 seconds
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) 19:45:13$ puppet master
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) 19:41:27$ puppet master
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) executed in 4.76 seconds
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) executed in 6.64 seconds
   Waiting for the puppet master to start
   The puppet master has started
   
   * Master: sign all certs
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) 19:45:18$ puppet cert --sign --all
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) 19:41:34$ puppet cert --sign --all
     Error: No waiting certificate requests to sign
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) executed in 1.13 seconds
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) executed in 1.58 seconds
   Exited: 24
   
   * Agents: Run agent --test second time to obtain signed cert
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) 19:45:19$ puppet agent --test --server kmgni2dngg4so4r.delivery.puppetlabs.net
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) 19:41:36$ puppet agent --test --server hd5ny3fnwaky20i.delivery.puppetlabs.net
     Info: Using configured environment 'production'
     Info: Retrieving pluginfacts
     Info: Retrieving plugin
-    Info: Caching catalog for kmgni2dngg4so4r.delivery.puppetlabs.net
-    Info: Applying configuration version '1502246444'
-    Notice: Applied catalog in 0.01 seconds
+    Info: Caching catalog for hd5ny3fnwaky20i.delivery.puppetlabs.net
+    Info: Applying configuration version '1502246221'
+    Notice: Applied catalog in 0.02 seconds
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) executed in 1.94 seconds
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) executed in 2.46 seconds
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) 19:45:21$ cat `puppet master --configprint pidfile`
-    2854  
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) executed in 0.87 seconds
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) 19:41:38$ cat `puppet master --configprint pidfile`
+    2825  
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) executed in 1.23 seconds
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) 19:45:22$ kill 2854
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) 19:41:39$ kill 2825
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) executed in 0.04 seconds
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) executed in 0.03 seconds
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) 19:45:22$ kill -0 2854
-    bash: line 0: kill: (2854) - No such process
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) 19:41:39$ kill -0 2825
+    bash: line 0: kill: (2825) - No such process
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) executed in 0.03 seconds
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) executed in 0.03 seconds
   Exited: 1
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) 19:45:22$ puppet master --configprint config
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) 19:41:39$ puppet master --configprint config
     /etc/puppetlabs/puppet/puppet.conf
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) executed in 0.73 seconds
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) executed in 0.86 seconds
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) 19:45:23$ if [ -f '/tmp/040_ValidateSignCert.rb.FzvkLl/puppet.conf.bak' ]; then cat '/tmp/040_ValidateSignCert.rb.FzvkLl/puppet.conf.bak' > '/etc/puppetlabs/puppet/puppet.conf'; rm -f '/tmp/040_ValidateSignCert.rb.FzvkLl/puppet.conf.bak'; fi
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) 19:41:40$ if [ -f '/tmp/040_ValidateSignCert.rb.ND1inz/puppet.conf.bak' ]; then cat '/tmp/040_ValidateSignCert.rb.ND1inz/puppet.conf.bak' > '/etc/puppetlabs/puppet/puppet.conf'; rm -f '/tmp/040_ValidateSignCert.rb.ND1inz/puppet.conf.bak'; fi
   
-  kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) executed in 0.04 seconds
+  hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) executed in 0.03 seconds
 Begin teardown
 End teardown
-]]></system-out>
+]]>
+      </system-out>
     </testcase>
-    <testcase classname="setup/aio/pre-suite" name="045_EnsureMasterStarted.rb" time="32.662712">
-      <system-out><![CDATA[
-kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) 19:45:23$ puppet resource service puppetserver ensure=running
+    <testcase classname='setup/aio/pre-suite' name='045_EnsureMasterStarted.rb' time='36.066701'>
+      <system-out>
+        <![CDATA[
+hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) 19:41:40$ puppet resource service puppetserver ensure=running
   Notice: /Service[puppetserver]/ensure: ensure changed 'stopped' to 'running'
   service { 'puppetserver':
     ensure => 'running',
   }
 
-kmgni2dngg4so4r.delivery.puppetlabs.net (centos7-64-1) executed in 32.66 seconds
+hd5ny3fnwaky20i.delivery.puppetlabs.net (centos7-64-1) executed in 36.07 seconds
 Begin teardown
 End teardown
-]]></system-out>
+]]>
+      </system-out>
     </testcase>
   </testsuite>
-<meta_test_info page_active="no-links" link_url=""/><testsuite name="tests" tests="5" errors="0" failures="0" skipped="5" pending="0" total="5" time="0.004050"><properties><property name="project" value="Beaker"/><property name="department" value="unknown"/><property name="created_by" value="rishi.javia"/><property name="host_tags" value="{}"/><property name="openstack_api_key" value=""/><property name="openstack_username" value=""/><property name="openstack_auth_url" value="/tokens"/><property name="openstack_tenant" value=""/><property name="openstack_keyname" value=""/><property name="openstack_network" value=""/><property name="openstack_region" value=""/><property name="openstack_volume_support" value="true"/><property name="jenkins_build_url" value=""/><property name="validate" value="true"/><property name="configure" value="true"/><property name="log_level" value="debug"/><property name="trace_limit" value="10"/><property name="master-start-curl-retries" value="30"/><property name="masterless" value="false"/><property name="options_file" value="merged_options.rb"/><property name="type" value="aio"/><property name="provision" value="true"/><property name="preserve_hosts" value="onfail"/><property name="root_keys" value="false"/><property name="quiet" value="false"/><property name="project_root" value="/Users/rishi.javia/Documents/beaker/lib/beaker"/><property name="xml_dir" value="junit"/><property name="xml_file" value="beaker_junit.xml"/><property name="xml_time" value="beaker_times.xml"/><property name="xml_time_enabled" value="false"/><property name="xml_stylesheet" value="junit.xsl"/><property name="default_log_prefix" value="beaker_logs"/><property name="log_dir" value="log"/><property name="log_sut_event" value="sut.log"/><property name="color" value="true"/><property name="dry_run" value="false"/><property name="test_tag_and" value="[]"/><property name="test_tag_or" value="[]"/><property name="test_tag_exclude" value="[]"/><property name="timeout" value="900"/><property name="fail_mode" value="slow"/><property name="accept_all_exit_codes" value="false"/><property name="timesync" value="false"/><property name="disable_iptables" value="false"/><property name="set_env" value="true"/><property name="disable_updates" value="true"/><property name="repo_proxy" value="true"/><property name="package_proxy" value="false"/><property name="add_el_extras" value="false"/><property name="epel_url" value="http://dl.fedoraproject.org/pub/epel"/><property name="epel_url_archive" value="http://archive.fedoraproject.org/pub/archive/epel"/><property name="consoleport" value="443"/><property name="pe_dir" value="/opt/enterprise/dists"/><property name="pe_version_file" value="LATEST"/><property name="pe_version_file_win" value="LATEST-win"/><property name="host_env" value="{}"/><property name="host_name_prefix" value=""/><property name="ssh_env_file" value="~/.ssh/environment"/><property name="profile_d_env_file" value="/etc/profile.d/beaker_env.sh"/><property name="dot_fog" value="/Users/rishi.javia/.fog"/><property name="ec2_yaml" value="config/image_templates/ec2.yaml"/><property name="help" value="false"/><property name="collect_perf_data" value="none"/><property name="puppetdb_port_ssl" value="8081"/><property name="puppetdb_port_nonssl" value="8080"/><property name="puppetserver_port" value="8140"/><property name="nodeclassifier_port" value="4433"/><property name="cache_files_locally" value="false"/><property name="aws_keyname_modifier" value="3483773355"/><property name="run_in_parallel" value="[]"/><property name="ssh" value="{:config=&gt;false, :paranoid=&gt;false, :auth_methods=&gt;[&quot;publickey&quot;], :port=&gt;22, :forward_agent=&gt;true, :keys=&gt;[&quot;id_rsa_acceptance&quot;, &quot;/Users/rishi.javia/.ssh/id_rsa-acceptance&quot;], :user_known_hosts_file=&gt;&quot;/Users/rishi.javia/.ssh/known_hosts&quot;, :keepalive=&gt;true}"/><property name="tests" value="[&quot;tests/windows/QA-506_windows_exit_codes_test.rb&quot;, &quot;tests/windows/QA-563_windows_exit_mcollective.rb&quot;, &quot;tests/windows/QA-760_win_dash_dot_file_test.rb&quot;, &quot;tests/windows/env_windows_installdir_fact.rb&quot;, &quot;tests/windows/eventlog.rb&quot;]"/><property name="pre_suite" value="[&quot;setup/common/pre-suite/000-delete-puppet-when-none.rb&quot;, &quot;setup/aio/pre-suite/010_Install.rb&quot;, &quot;setup/aio/pre-suite/020_InstallCumulusModules.rb&quot;, &quot;setup/aio/pre-suite/021_InstallAristaModule.rb&quot;, &quot;setup/common/pre-suite/025_StopFirewall.rb&quot;, &quot;setup/common/pre-suite/040_ValidateSignCert.rb&quot;, &quot;setup/aio/pre-suite/045_EnsureMasterStarted.rb&quot;]"/><property name="is_puppetserver" value="true"/><property name="use-service" value="true"/><property name="puppetservice" value="puppetserver"/><property name="puppetserver-confdir" value="/etc/puppetlabs/puppetserver/conf.d"/><property name="puppetserver-config" value="/etc/puppetlabs/puppetserver/conf.d/puppetserver.conf"/><property name="load_path" value="[&quot;./lib&quot;]"/><property name="xml" value="true"/><property name="forge_host" value="forge-aio01-petest.puppetlabs.com"/><property name="hosts_file" value="/Users/rishi.javia/Documents/puppet/acceptance/centos7-pe.yml"/><property name="command_line" value="/Users/rishi.javia/Documents/puppet/acceptance/vendor/bundle/ruby/2.2.0/bin/beaker --options-file merged_options.rb --hosts centos7-pe.yml --tests=tests/windows"/><property name="HOSTS" value="{:&quot;centos7-64-1&quot;=&gt;{:pe_dir=&gt;nil, :pe_ver=&gt;nil, :pe_upgrade_dir=&gt;nil, :pe_upgrade_ver=&gt;nil, :hypervisor=&gt;&quot;vmpooler&quot;, :platform=&gt;&quot;el-7-x86_64&quot;, :template=&gt;&quot;centos-7-x86_64&quot;, :roles=&gt;[&quot;master&quot;, &quot;agent&quot;, &quot;dashboard&quot;, &quot;database&quot;, &quot;default&quot;], :host_tags=&gt;{}}}"/><property name="nfs_server" value="none"/><property name="pooling_api" value="http://vmpooler.delivery.puppetlabs.net/"/><property name="home" value="/Users/rishi.javia"/><property name="helper" value="[]"/><property name="post_suite" value="[]"/><property name="install" value="[]"/><property name="pre_cleanup" value="[]"/><property name="modules" value="[]"/><property name="logger" value="#&lt;Beaker::Logger:0x007fa9e04a73d8&gt;"/><property name="timestamp" value="2017-08-08 19:44:30 -0700"/><property name="beaker_version" value="3.21.1"/><property name="log_prefix" value="centos7-pe"/><property name="xml_dated_dir" value="junit/centos7-pe/2017-08-08_19_44_30"/><property name="log_dated_dir" value="log/centos7-pe/2017-08-08_19_44_30"/><property name="logger_sut" value="#&lt;Beaker::Logger:0x007fa9e04a63c0&gt;"/><property name="platform_tag_confines_object" value="#&lt;Beaker::DSL::TestTagging::PlatformTagConfiner:0x007fa9e069c120&gt;"/></properties><testcase classname="tests/windows" name="QA-506_windows_exit_codes_test.rb" time="0.000885"><skipped type="skip"/><system-out><![CDATA[
+  <meta_test_info page_active='no-links' link_url=''/>
+  <testsuite name='tests' tests='5' errors='0' failures='0' skipped='5' pending='0' total='5' time='0.004989'>
+    <properties>
+      <property name='project' value='Beaker'/>
+      <property name='department' value='unknown'/>
+      <property name='created_by' value='rishi.javia'/>
+      <property name='host_tags' value='{}'/>
+      <property name='openstack_api_key' value=''/>
+      <property name='openstack_username' value=''/>
+      <property name='openstack_auth_url' value='/tokens'/>
+      <property name='openstack_tenant' value=''/>
+      <property name='openstack_keyname' value=''/>
+      <property name='openstack_network' value=''/>
+      <property name='openstack_region' value=''/>
+      <property name='openstack_volume_support' value='true'/>
+      <property name='jenkins_build_url' value=''/>
+      <property name='validate' value='true'/>
+      <property name='configure' value='true'/>
+      <property name='log_level' value='debug'/>
+      <property name='trace_limit' value='10'/>
+      <property name='master-start-curl-retries' value='30'/>
+      <property name='masterless' value='false'/>
+      <property name='options_file' value='merged_options.rb'/>
+      <property name='type' value='aio'/>
+      <property name='provision' value='true'/>
+      <property name='preserve_hosts' value='onfail'/>
+      <property name='root_keys' value='false'/>
+      <property name='quiet' value='false'/>
+      <property name='project_root' value='/Users/rishi.javia/Documents/beaker/lib/beaker'/>
+      <property name='xml_dir' value='junit'/>
+      <property name='xml_file' value='beaker_junit.xml'/>
+      <property name='xml_time' value='beaker_times.xml'/>
+      <property name='xml_time_enabled' value='false'/>
+      <property name='xml_stylesheet' value='junit.xsl'/>
+      <property name='default_log_prefix' value='beaker_logs'/>
+      <property name='log_dir' value='log'/>
+      <property name='log_sut_event' value='sut.log'/>
+      <property name='color' value='true'/>
+      <property name='dry_run' value='false'/>
+      <property name='test_tag_and' value='[]'/>
+      <property name='test_tag_or' value='[]'/>
+      <property name='test_tag_exclude' value='[]'/>
+      <property name='timeout' value='900'/>
+      <property name='fail_mode' value='slow'/>
+      <property name='accept_all_exit_codes' value='false'/>
+      <property name='timesync' value='false'/>
+      <property name='disable_iptables' value='false'/>
+      <property name='set_env' value='true'/>
+      <property name='disable_updates' value='true'/>
+      <property name='repo_proxy' value='true'/>
+      <property name='package_proxy' value='false'/>
+      <property name='add_el_extras' value='false'/>
+      <property name='epel_url' value='http://dl.fedoraproject.org/pub/epel'/>
+      <property name='epel_url_archive' value='http://archive.fedoraproject.org/pub/archive/epel'/>
+      <property name='consoleport' value='443'/>
+      <property name='pe_dir' value='/opt/enterprise/dists'/>
+      <property name='pe_version_file' value='LATEST'/>
+      <property name='pe_version_file_win' value='LATEST-win'/>
+      <property name='host_env' value='{}'/>
+      <property name='host_name_prefix' value=''/>
+      <property name='ssh_env_file' value='~/.ssh/environment'/>
+      <property name='profile_d_env_file' value='/etc/profile.d/beaker_env.sh'/>
+      <property name='dot_fog' value='/Users/rishi.javia/.fog'/>
+      <property name='ec2_yaml' value='config/image_templates/ec2.yaml'/>
+      <property name='help' value='false'/>
+      <property name='collect_perf_data' value='none'/>
+      <property name='puppetdb_port_ssl' value='8081'/>
+      <property name='puppetdb_port_nonssl' value='8080'/>
+      <property name='puppetserver_port' value='8140'/>
+      <property name='nodeclassifier_port' value='4433'/>
+      <property name='cache_files_locally' value='false'/>
+      <property name='aws_keyname_modifier' value='6697587076'/>
+      <property name='run_in_parallel' value='[]'/>
+      <property name='ssh' value='{:config=&gt;false, :paranoid=&gt;false, :auth_methods=&gt;[&quot;publickey&quot;], :port=&gt;22, :forward_agent=&gt;true, :keys=&gt;[&quot;id_rsa_acceptance&quot;, &quot;/Users/rishi.javia/.ssh/id_rsa-acceptance&quot;], :user_known_hosts_file=&gt;&quot;/Users/rishi.javia/.ssh/known_hosts&quot;, :keepalive=&gt;true}'/>
+      <property name='tests' value='[&quot;tests/windows/QA-506_windows_exit_codes_test.rb&quot;, &quot;tests/windows/QA-563_windows_exit_mcollective.rb&quot;, &quot;tests/windows/QA-760_win_dash_dot_file_test.rb&quot;, &quot;tests/windows/env_windows_installdir_fact.rb&quot;, &quot;tests/windows/eventlog.rb&quot;]'/>
+      <property name='pre_suite' value='[&quot;setup/common/pre-suite/000-delete-puppet-when-none.rb&quot;, &quot;setup/aio/pre-suite/010_Install.rb&quot;, &quot;setup/aio/pre-suite/020_InstallCumulusModules.rb&quot;, &quot;setup/aio/pre-suite/021_InstallAristaModule.rb&quot;, &quot;setup/common/pre-suite/025_StopFirewall.rb&quot;, &quot;setup/common/pre-suite/040_ValidateSignCert.rb&quot;, &quot;setup/aio/pre-suite/045_EnsureMasterStarted.rb&quot;]'/>
+      <property name='is_puppetserver' value='true'/>
+      <property name='use-service' value='true'/>
+      <property name='puppetservice' value='puppetserver'/>
+      <property name='puppetserver-confdir' value='/etc/puppetlabs/puppetserver/conf.d'/>
+      <property name='puppetserver-config' value='/etc/puppetlabs/puppetserver/conf.d/puppetserver.conf'/>
+      <property name='load_path' value='[&quot;./lib&quot;]'/>
+      <property name='xml' value='true'/>
+      <property name='forge_host' value='forge-aio01-petest.puppetlabs.com'/>
+      <property name='hosts_file' value='/Users/rishi.javia/Documents/puppet/acceptance/centos7-pe.yml'/>
+      <property name='command_line' value='/Users/rishi.javia/Documents/puppet/acceptance/vendor/bundle/ruby/2.2.0/bin/beaker --options-file merged_options.rb --hosts centos7-pe.yml --tests=tests/windows'/>
+      <property name='HOSTS' value='{:&quot;centos7-64-1&quot;=&gt;{:pe_dir=&gt;nil, :pe_ver=&gt;nil, :pe_upgrade_dir=&gt;nil, :pe_upgrade_ver=&gt;nil, :hypervisor=&gt;&quot;vmpooler&quot;, :platform=&gt;&quot;el-7-x86_64&quot;, :template=&gt;&quot;centos-7-x86_64&quot;, :roles=&gt;[&quot;master&quot;, &quot;agent&quot;, &quot;dashboard&quot;, &quot;database&quot;, &quot;default&quot;], :host_tags=&gt;{}}}'/>
+      <property name='nfs_server' value='none'/>
+      <property name='pooling_api' value='http://vmpooler.delivery.puppetlabs.net/'/>
+      <property name='home' value='/Users/rishi.javia'/>
+      <property name='helper' value='[]'/>
+      <property name='post_suite' value='[]'/>
+      <property name='install' value='[]'/>
+      <property name='pre_cleanup' value='[]'/>
+      <property name='modules' value='[]'/>
+      <property name='logger' value='#&lt;Beaker::Logger:0x007fc73c267108&gt;'/>
+      <property name='timestamp' value='2017-08-08 19:40:42 -0700'/>
+      <property name='beaker_version' value='3.21.1'/>
+      <property name='log_prefix' value='centos7-pe'/>
+      <property name='xml_dated_dir' value='junit/centos7-pe/2017-08-08_19_40_42'/>
+      <property name='log_dated_dir' value='log/centos7-pe/2017-08-08_19_40_42'/>
+      <property name='logger_sut' value='#&lt;Beaker::Logger:0x007fc73c266118&gt;'/>
+      <property name='platform_tag_confines_object' value='#&lt;Beaker::DSL::TestTagging::PlatformTagConfiner:0x007fc73d34d990&gt;'/>
+    </properties>
+    <testcase classname='tests/windows' name='QA-506_windows_exit_codes_test.rb' time='0.001017'>
+      <skipped type='skip'/>
+      <system-out>
+        <![CDATA[
 Windows Exit Codes - Acceptance Tests
 Warning: No suitable hosts with: {:platform=>"windows"}
 
 No suitable hosts found with {:platform=>"windows"}
 Begin teardown
 End teardown
-]]></system-out></testcase><testcase classname="tests/windows" name="QA-563_windows_exit_mcollective.rb" time="0.000495"><skipped type="skip"/><system-out><![CDATA[
+]]>
+      </system-out>
+    </testcase>
+    <testcase classname='tests/windows' name='QA-563_windows_exit_mcollective.rb' time='0.000728'>
+      <skipped type='skip'/>
+      <system-out>
+        <![CDATA[
 MCollective service exits on windows agent
 Warning: No suitable hosts with: {:platform=>"windows"}
 
 No suitable hosts found with {:platform=>"windows"}
 Begin teardown
 End teardown
-]]></system-out></testcase><testcase classname="tests/windows" name="QA-760_win_dash_dot_file_test.rb" time="0.000486"><skipped type="skip"/><system-out><![CDATA[
+]]>
+      </system-out>
+    </testcase>
+    <testcase classname='tests/windows' name='QA-760_win_dash_dot_file_test.rb' time='0.000725'>
+      <skipped type='skip'/>
+      <system-out>
+        <![CDATA[
 QA-760 - Windows Files Containing '-' and '.'
 Warning: No suitable hosts with: {:platform=>"windows"}
 
 No suitable hosts found with {:platform=>"windows"}
 Begin teardown
 End teardown
-]]></system-out></testcase><testcase classname="tests/windows" name="env_windows_installdir_fact.rb" time="0.000545"><skipped type="skip"/><system-out><![CDATA[
+]]>
+      </system-out>
+    </testcase>
+    <testcase classname='tests/windows' name='env_windows_installdir_fact.rb' time='0.000786'>
+      <skipped type='skip'/>
+      <system-out>
+        <![CDATA[
 PA-466: Ensure env_windows_installdir fact is present and correct
   Warning: No suitable hosts with: {:platform=>"windows"}
   
   No suitable hosts found with {:platform=>"windows"}
   Begin teardown
   End teardown
-]]></system-out></testcase><testcase classname="tests/windows" name="eventlog.rb" time="0.000419"><skipped type="skip"/><system-out><![CDATA[  
+]]>
+      </system-out>
+    </testcase>
+    <testcase classname='tests/windows' name='eventlog.rb' time='0.000644'>
+      <skipped type='skip'/>
+      <system-out>
+        <![CDATA[  
   Write to Windows eventlog
   Warning: No suitable hosts with: {:platform=>"windows"}
   
   No suitable hosts found with {:platform=>"windows"}
   Begin teardown
   End teardown
-]]></system-out></testcase></testsuite></testsuites>
+]]>
+      </system-out>
+    </testcase>
+  </testsuite>
+</testsuites>
